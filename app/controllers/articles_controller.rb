@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      sleep(5)
+      HardWorker.perform_async('bob', 5)
       flash[:notice] = "Article was created."
       redirect_to articles_path
     else
