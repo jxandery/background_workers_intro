@@ -7,6 +7,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'sidekiq'
+gem 'sinatra'
 
 group :development, :test do
   gem 'spring'

@@ -1,4 +1,9 @@
+
 Rails.application.routes.draw do
+
+require 'sidekiq'
+mount Sidekiq:Web => '/sidekiq'
+
   resources :articles
   resources :comments
   resource  :dashboard
